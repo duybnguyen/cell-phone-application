@@ -30,12 +30,23 @@ public class CellPhoneApplication {
         cellPhone.setPhoneNumber(phoneNumber);
         cellPhone.setOwner(owner);
 
-        System.out.println(cellPhone.getSerialNumber());
-        System.out.println(cellPhone.getModel());
-        System.out.println(cellPhone.getCarrier());
-        System.out.println(cellPhone.getPhoneNumber());
-        System.out.println(cellPhone.getOwner());
+        CellPhone cellPhone2 = new CellPhone();
+        cellPhone2.setOwner("Duy");
+        cellPhone2.setModel("Iphone 16");
+        cellPhone2.setCarrier("Verizon");
+        cellPhone2.setPhoneNumber("123-456-7890");
+        cellPhone2.setSerialNumber(39847543);
+        display(cellPhone);
+        display(cellPhone2);
 
+        cellPhone.dial(cellPhone2.getPhoneNumber());
+    }
 
+    public static void display(CellPhone phone) {
+        System.out.println(phone.getSerialNumber());
+        System.out.println(phone.getModel());
+        System.out.println(phone.getCarrier());
+        System.out.println(phone.getPhoneNumber());
+        System.out.println(phone.getOwner());
     }
 }

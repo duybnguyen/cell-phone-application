@@ -54,4 +54,8 @@ public class CellPhone {
     public void setModel(String model) {
         this.model = model;
     }
+
+    public void dial(String phoneNumber) {
+        System.out.println(this.owner + "'s phone is calling " + phoneNumber);
+    }
 }
